@@ -11,7 +11,7 @@
   "permissions": [
     "storage",
     "alarms",
-    "https://uncia.cc.ncu.edu.tw/*"
+    "https://latias.cc.ncu.edu.tw/*"
   ],
   "background": {
     "scripts": ["background.js"],

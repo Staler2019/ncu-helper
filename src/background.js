@@ -43,7 +43,7 @@ chrome.runtime.onMessage.addListener((message, _sender, _sendResponse) => {
 function writeDormNetflowData (dormNetflow) {
   if (dormNetflow && dormNetflow.enabled && dormNetflow.ip) {
     const ret = []
-    const url = 'https://uncia.cc.ncu.edu.tw/dormnet/index.php'
+    const url = 'https://latias.cc.ncu.edu.tw/dormnet/index.php'
     const xhr = new XMLHttpRequest()
     xhr.addEventListener('load', function () {
       if (this.status === 200) {

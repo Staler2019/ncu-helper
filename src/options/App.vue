@@ -41,7 +41,7 @@
                     :label="dormNetflow.enabled ? '啟用' : '未啟用'"
                     v-model="dormNetflow.enabled"
                   ></v-switch>
-                  啟用宿網流量監控工具。監控宿網流量並顯示剩餘上傳流量在彈跳視窗（popup），以方便使用者得知會不會超量使用（24 小時內上傳流量超過 3GB）導致計算機中心鎖卡。設定新 IP 位址後，需要等待至多 5 分鐘取得流量資訊。流量資訊僅供參考，實際資訊請至<a href="http://uncia.cc.ncu.edu.tw/dormnet/index.php?section=netflow">中央大學學生宿舍網路系統查詢</a>。
+                  啟用宿網流量監控工具。監控宿網流量並顯示剩餘上傳流量在彈跳視窗（popup），以方便使用者得知會不會超量使用（24 小時內上傳流量超過 3GB）導致計算機中心鎖卡。設定新 IP 位址後，需要等待至多 5 分鐘取得流量資訊。流量資訊僅供參考，實際資訊請至<a href="https://latias.cc.ncu.edu.tw/dormnet/index.php?section=netflow">中央大學學生宿舍網路系統查詢</a>。
                   <v-divider class="my-4"></v-divider>
                   <v-form v-model="dormNetflow.valid">
                     <v-layout row>
