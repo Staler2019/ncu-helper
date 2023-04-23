@@ -43,7 +43,7 @@ chrome.runtime.onMessage.addListener((message, _sender, _sendResponse) => {
 function writeDormNetflowData (dormNetflow) {
   if (dormNetflow && dormNetflow.enabled && dormNetflow.ip) {
     const ret = []
-    const url = 'https://latias.cc.ncu.edu.tw/dormnet/index.php'
+    const url = `https://latias.cc.ncu.edu.tw/dormnet/index.php?section=netflow&ip=${dormNetflow.ip}`
     const xhr = new XMLHttpRequest()
     xhr.addEventListener('load', function () {
       if (this.status === 200) {
@@ -65,9 +65,9 @@ function writeDormNetflowData (dormNetflow) {
         })
       }
     })
-    xhr.open('post', url, true)
+    xhr.open('GET', url, true)
     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
     xhr.responseType = 'document'
-    xhr.send(`section=netflow&ip=${dormNetflow.ip}`)
+    xhr.send()
   }
 }
